@@ -21,7 +21,7 @@ select course_id, title, credits from course
 -- deletando registro do curso '105' que possui 3 créditos do aluno do id '30299'
 delete from takes where id ='30299' and course_id = 105
 
--- verificando total de creditos do alunoo.
+-- verificando total de creditos do aluno.
 --Como a trigger está ativada, 
 --foi subtraido 3 créditos dos créditos totais após a exclusão do curso '105'
 select * from takes where id = '30299'
