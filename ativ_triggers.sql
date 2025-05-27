@@ -5,7 +5,7 @@ AFTER DELETE-- depois que um delete em um registro ocorrer na tabela takes
 AS
 BEGIN -- faça
 UPDATE s -- atualiza a tabela student, atualiza os créditos dos alunos que perderam cursos
-SET s.tot_cred = s.tot_cred - c.credits -- o total de creditos vai ser total de credito menos o credito
+SET s.tot_cred = s.tot_cred - c.credits -- o total de creditos vai ser total de credito menos o Nnumero de creditos do curso deletado
 FROM dbo.student as s
 JOIN deleted as d ON s.id = d.ID -- da tabela deleted que que guarda o ultimo registro deletado, conecta pelo id
 JOIN dbo.course as c --busca o credito do curso na tabela course
