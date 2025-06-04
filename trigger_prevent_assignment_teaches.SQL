@@ -1,4 +1,4 @@
-- verificar numero de atribuições do instructor
+-- verificar numero de atribuições do instructor
 select a.id, b.year, b.course_id, count(*) as qtdaulas 
 from instructor as a
 left join teaches as b
